@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .cipher-box {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .cipher-box h2 {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .btn {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cipher-box">
+        <h2>Caesar Cipher Tool</h2>
+
+        <!-- Encryption Form -->
+        <div class="section-title">Encryption</div>
+        <form method="POST" action="/encrypt">
+            <div class="form-group">
+                <label class="form-label">Plain Text:</label>
+                <input type="text" class="form-control" name="inputPlainText" placeholder="Enter plain text..." required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Key:</label>
+                <input type="number" class="form-control" name="inputKeyPlain" placeholder="Enter key..." required>
+            </div>
+            <button type="submit" class="btn btn-primary">Encrypt</button>
+        </form>
+
+        <!-- Decryption Form -->
+        <div class="section-title">Decryption</div>
+        <form method="POST" action="/decrypt">
+            <div class="form-group">
+                <label class="form-label">Cipher Text:</label>
+                <input type="text" class="form-control" name="inputCipherText" placeholder="Enter cipher text..." required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Key:</label>
+                <input type="number" class="form-control" name="inputKeyCipher" placeholder="Enter key..." required>
+            </div>
+            <button type="submit" class="btn btn-success">Decrypt</button>
+        </form>
+    </div>
+</body>
+</html>
